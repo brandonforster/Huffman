@@ -7,24 +7,24 @@
 
 public class Node implements Comparable<Node> {
 
-	private char 	token;
+	private int 	token;
 	private int 	frequency;
 	private Node 	left;
 	private Node 	right;
 
-	Node(char ch, int freq, Node left, Node right) {
-		this.setToken(token);
-		this.setFrequency(frequency);
-		this.setLeft(left);
-		this.setRight(right);
+	Node(int ch, int freq, Node l, Node r) {
+		this.token = ch;
+		this.frequency = freq;
+		this.left = l;
+		this.right = r;
 	}
 
-	public char getToken() {
+	public int getToken() {
 		return token;
 	}
 
-	public void setToken(char token) {
-		this.token = token;
+	public void setToken(int id) {
+		this.token = id;
 	}
 
 	public int getFrequency() {
@@ -62,7 +62,8 @@ public class Node implements Comparable<Node> {
 	 */
 	public int compareTo(Node other) {
 
-		return (other.getFrequency() - this.getFrequency());
+		return (this.getFrequency() - other.getFrequency());
 	}
+
 
 }

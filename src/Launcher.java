@@ -11,6 +11,7 @@ import java.util.*;
 public class Launcher {
 
 	private String inputFileText;
+	private String treeText;
 
 	public Launcher(String inputFilename)
 	{
